@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "common-styles/config";
+
+@mixin btn-hover(){
+  background: #8abd3c;
+  transition: background-color 300ms;
+  &:hover{
+    background: darken(aliceblue, 15%);
+  }
+}
+
+$default-bg: #e7ffda;
+
+.font-settings{
+  font-family: $font-default;
+  color: $color-default;
+}
+
+.box-responsive{
+  display: flex;
+  flex-direction: row;
+  @media (max-width: 700px){
+    flex-direction: column;
+  }
+}
+
+.hdl-default {
+  font-weight: normal;
+  border-bottom: $border-width-default solid $color-default;
+  padding-bottom: 23px;
+  color: $color-default;
+  font-family: $font-default;
+}
+
+.btn-submit {
+  color: $color-default;
+  border: 1px solid $color-default;
+  border-radius: 4px;
+  @include btn-hover;
+}
+
+.box-toggle {
+  @extend .font-settings;
+  .btn-switch {
+    width: 100%;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border: $border-width-default solid $color-default;
+    border-top: 0;
+    padding: 10px;
+    @include btn-hover;
+  }
+}
+

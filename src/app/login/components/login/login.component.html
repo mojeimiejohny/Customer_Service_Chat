@@ -1,0 +1,17 @@
+<section class=box-text>
+<app-shared>
+  <h2 class="hdl-default">{{ title }}</h2>
+
+  <input type="text" class="input-default" #email>
+  <input type="password" class="input-default" #pass>
+
+  <button class="btn-submit" (click)="logged($event, email, pass)">Sign in</button>
+
+  <div class="alert alert-danger" role="alert" *ngFor="let message of messages">
+    {{ message }}
+  </div>
+
+  <button class="btn-switch" (click)="toggleFunc()">Rejestracja</button>
+
+</app-shared>
+</section>

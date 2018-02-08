@@ -1,0 +1,12 @@
+<section class="box-text">
+<app-shared>
+  <h2 class="hdl-default">Registration</h2>
+
+  <input type="text" class="input-default" #email>
+  <input type="password" class="input-default" #pass>
+
+  <button class="btn-submit" (click)="registrate($event, email, pass)">Join us</button>
+
+  <button class="btn-switch" (click)="toggleFunc()">Logowanie</button>
+</app-shared>
+</section>

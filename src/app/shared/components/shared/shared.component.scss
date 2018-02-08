@@ -1,0 +1,33 @@
+@import "../../../../styles";
+
+.box-shared {
+  border: 1px solid $color-default;
+  //margin: 10px;
+  padding: 20px;
+  background: aliceblue;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  text-align: center;
+
+  form {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .input-default {
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid $color-default;
+  }
+  .error {
+
+  }
+
+}
+
+.box-toggle {
+  .btn-switch {
+
+  }
+}
