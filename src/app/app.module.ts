@@ -4,34 +4,27 @@ import { NgModule } from '@angular/core';
 
 // components imports
 import { AppComponent } from './app.component';
-import { MenuComponent} from './menu/component/menu.component';
+import {AppRoutingModule} from './app-routing.module';
+import { WallComponent } from './wall/component/wall.component';
+import {MainModule} from './main/main.module';
+import {StartModule} from './start/start.module';
 
 // module imports
-import { LoginModule } from './login/login.module';
-import { RegistrationModule } from './registration/registration.module';
-import { SharedModule } from './shared/shared.module';
-import { MenuModule} from './menu/menu.module';
 
 // import serwisów
-import {AuthenticationService} from './services/authentication.service';
 
-
-// w tablicy declarations dajemy komponenty
-// w tablicy imports dajemy moduły
-// w tablicy providers dajemy serwisy
 
 @NgModule({
   declarations: [
-    AppComponent,
-    MenuComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    LoginModule,
-    RegistrationModule,
-    SharedModule
+    AppRoutingModule,
+    MainModule,
+    StartModule
   ],
-  providers: [AuthenticationService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
